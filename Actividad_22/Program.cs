@@ -27,7 +27,7 @@ class Usuario
 
     public void MostrarDatos ()
     {
-        Console.WriteLine("Nombre: " + nombre);
+        Console.WriteLine("Nombre:_ " + nombre);
         Console.WriteLine("IP:_ "+ip);
     
     }
@@ -73,13 +73,31 @@ class Program
     {
         Console.WriteLine("********Registro de admin******");
         Console.WriteLine("Nombre:_ ");
-        string NombreAdmin=Console.ReadLine();
+        string NombreAdmin = Console.ReadLine();
         Console.WriteLine("Ip:_ ");
-        string IpAdmin=Console.ReadLine();
+        string IpAdmin = Console.ReadLine();
         Console.WriteLine("Nivel (Alto/medio):_ ");
         string nivel = Console.ReadLine();
 
         UsuarioAdmin admin = new UsuarioAdmin(NombreAdmin, IpAdmin, nivel);
+
+        Console.WriteLine("\n *******Registro de usuario Básico****");
+
+        Console.WriteLine("Nombre: ");
+        string NombreBasico = Console.ReadLine();
+        Console.WriteLine("Ip:_ ");
+        string IpBasico = Console.ReadLine();
+        Console.WriteLine("Estado (Activo/Inactivo):_ ");
+        string Estado = Console.ReadLine();
+
+        UsuarioBasico basico = new UsuarioBasico(NombreBasico, IpBasico, Estado);
+
+        Console.WriteLine("\n ----- Informacion en sistema----");
+        admin.MostrarAdmin();
+        Console.WriteLine();
+        basico.MostrarBasico();
+
+        Console.ReadKey();
 
 
 
